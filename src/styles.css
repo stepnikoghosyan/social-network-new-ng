@@ -1,1 +1,271 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: cadetblue;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.horizontalLine {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+  box-shadow: 0 1px 5px 0 #424242;
+}
+
+.page-container {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 5px 0 #424242;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header */
+.header {
+  /* background-color: tomato; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 3px 5px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.header-title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.header-search-input {
+  flex-grow: 1;
+  height: 100%;
+  max-width: 80%;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: 0;
+  background: transparent;
+}
+
+.header-btn-with-image {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.header-btn-with-image:active {
+  box-shadow: 0 0 5px 3px gray;
+}
+
+.header-search-input {
+  flex-grow: 1;
+  height: 100%;
+  max-width: 80%;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: 0;
+  background: transparent;
+}
+
+.header-btn-with-text {
+  color: #0184ff;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 3px 10px 0 10px;
+}
+
+.vertically-scrollable {
+  overflow-y: scroll;
+}
+
+
+.icon-circle {
+  border-radius: 50%;
+  background: transparent;
+}
+
+
+/*HOMEPAGE*/
+/* HEADER */
+.homepage-header {
+  display: flex;
+  height: 40px;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.homepage-title {
+  width: 100%;
+  text-align: center;
+}
+
+.homepage-header-search-btn {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  align-self: flex-end;
+}
+
+.homepage-header-search-btn:hover {
+  cursor: pointer;
+}
+
+.homepage-header-search-btn:active .homepage-search-icon {
+  box-shadow: 0 0 5px 5px #777;
+}
+
+.homepage-search-icon {
+  display: block;
+  width: 100;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.homepage-search-input {
+  width: 80%;
+  border: 0;
+  border-bottom: 1px solid gray;
+  border-radius: 5px 5px 0 0;
+  outline: 0;
+  background: transparent;
+  padding: 0;
+  height: 35px;
+  font-size: 20px;
+}
+
+.homepage-cancel-btn {
+  color: #0184ff;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.homepage-cancel-btn:hover {
+  cursor: pointer;
+}
+
+
+/* TIMELINE */
+.timeline {
+  background-color: #f2f2f2;
+}
+
+
+/*CARD container*/
+.card-container {
+  margin: 10px 7px 0 7px;
+  padding: 7px;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 0 0 5px 0 #424242;
+  -moz-box-shadow: 0 0 5px 0 #424242;
+  box-shadow: 0 0 5px 0 #424242;
+}
+
+.card-header {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+
+.round-image-container-btn {
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  box-sizing: border-box;
+  max-width: 50px;
+  max-height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0.5em;
+}
+
+.rounded-image-size {
+  width: 100%;
+  height: 100%;
+}
+
+.card-profile-name {
+  display: inline-block;
+  margin-left: 7px;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+.card-content-text {
+  padding: 3px 0;
+}
+
+.card-content-text > pre {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.card-content-text > img {
+  width: 100%;
+}
+
+.card-post-date {
+  margin: 3px 0 0 10px;
+  font-size: 14px;
+}
+
+
+
+
+/*FUCK*/
+app-homepage, app-friends, app-messages, app-room {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 5px 0 #424242;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}

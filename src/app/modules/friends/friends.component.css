@@ -1,0 +1,77 @@
+/* CONTENT */
+.friends-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  /* background-color: bisque; */
+  padding: 3px 10px 0 10px;
+}
+
+.friend-request-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 0px gray;
+  margin-top: 10px;
+}
+
+.icon-width-30 {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.friend-request-profile-name {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.friend-request-buttons-container {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.friend-request-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid gray;
+  background: transparent;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+.friend-request-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+/* X button */
+.friend-request-btn:first-child {
+  box-shadow: 0 0 3px 1px #fe3635;
+}
+
+/* Accept button */
+.friend-request-btn:nth-child(2) {
+  box-shadow: 0 0 3px 1px #1def5a;
+}
+
+.send-requst-btn {
+  border-radius: 3px;
+}
+
+.send-requst-btn:hover {
+  box-shadow: 0 0 5px 3px #0184ff;
+}
+
+.send-requst-btn:active {
+  color: #fff;
+  background: #072f5f;
+}
