@@ -25,6 +25,10 @@ export class AuthService extends BaseRestService<AuthModel> {
     super(http);
   }
 
+  public getNewTokens(): Observable<SuccessResponseModel<Partial<AuthModel>>> {
+    return this.create('api-token-refresh', {refreshToken: AuthService.getRefreshToken});
+  }
+
   public static get isAuthenticated(): boolean {
     const token = AuthService.getAuthToken;
     try {

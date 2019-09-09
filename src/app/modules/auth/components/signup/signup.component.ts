@@ -1,18 +1,22 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {HttpErrorResponse} from '@angular/common/http';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 
 // utils
 import {emailPattern, passwordPattern} from '../../../../shared/validators/patterns';
-import {AuthService} from '../../services/auth.service';
-import {Subject} from 'rxjs';
-import {takeUntil} from 'rxjs/operators';
-import {SuccessResponseModel} from '../../../../shared/models/result.model';
-import {AuthModel} from '../../models/response/auth.model';
-import {Router} from '@angular/router';
-import {HttpErrorResponse} from '@angular/common/http';
 import {formErrorHandler} from '../../../../shared/utils/error-handlers';
 import {FormValidation} from '../../../../shared/utils/forms';
+
+// services
+import {AuthService} from '../../services/auth.service';
+
+// models
+import {SuccessResponseModel} from '../../../../shared/models/result.model';
 import {IRegisterPayload} from '../../models/payload/register-payload.model';
+import {AuthModel} from '../../models/response/auth.model';
 
 @Component({
   selector: 'app-signup',

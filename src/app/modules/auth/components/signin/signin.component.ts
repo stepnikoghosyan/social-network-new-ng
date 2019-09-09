@@ -1,16 +1,22 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {FormValidation} from '../../../../shared/utils/forms';
-import {Subject} from 'rxjs';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {emailPattern} from '../../../../shared/validators/patterns';
-import {IAuthPayload} from '../../models/payload/auth-payload.model';
-import {AuthService} from '../../services/auth.service';
-import {takeUntil} from 'rxjs/operators';
-import {SuccessResponseModel} from '../../../../shared/models/result.model';
-import {AuthModel} from '../../models/response/auth.model';
 import {Router} from '@angular/router';
 import {HttpErrorResponse} from '@angular/common/http';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
+
+// utils
+import {FormValidation} from '../../../../shared/utils/forms';
+import {emailPattern} from '../../../../shared/validators/patterns';
 import {formErrorHandler} from '../../../../shared/utils/error-handlers';
+
+// services
+import {AuthService} from '../../services/auth.service';
+
+// models
+import {SuccessResponseModel} from '../../../../shared/models/result.model';
+import {IAuthPayload} from '../../models/payload/auth-payload.model';
+import {AuthModel} from '../../models/response/auth.model';
 
 @Component({
   selector: 'app-signin',
