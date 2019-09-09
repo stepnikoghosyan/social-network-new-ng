@@ -1,37 +1,45 @@
 <header class="header">
-  <!-- <h1 class="header-title">Hopar</h1>
+  <ng-container *ngIf="mode === PAGE_MODES.requests">
+    <h1 class="header-title">Hopar</h1>
 
-  <button class="header-btn-with-image">
-    <img src="../assets/img/icons/icon-search.svg"/>
-  </button> -->
+    <button (click)="setMode = PAGE_MODES.search" class="header-btn-with-image">
+      <img src="../assets/img/icons/icon-search.svg"/>
+    </button>
+  </ng-container>
 
-  <input class="header-search-input" type="text" placeholder="Name" />
-  <button class="header-btn-with-text">Cancel</button>
+  <ng-container *ngIf="mode === PAGE_MODES.search">
+    <input (keyup)="getData($event.target.value)" class="header-search-input" type="text" placeholder="Name"/>
+    <button (click)="setMode = PAGE_MODES.requests" class="header-btn-with-text">Cancel</button>
+  </ng-container>
 </header>
 
 <section class="friends-content vertically-scrollable">
   <!-- Friend request example -->
-  <!-- <article class="friend-request-row">
-    <img class="icon-circle icon-width-30" src="../assets/img/icons/icon-profile-default-picture.svg">
+  <ng-container *ngIf="mode === PAGE_MODES.requests">
+    <article class="friend-request-row">
+      <img class="icon-circle icon-width-30" src="../assets/img/icons/icon-profile-default-picture.svg">
 
-    <p class="friend-request-profile-name">Stepan Nikoghosyan</p>
+      <p class="friend-request-profile-name">Stepan Nikoghosyan</p>
 
-    <div class="friend-request-buttons-container">
-      <button class="friend-request-btn">
-        <img src="../assets/img/icons/icon-x.svg" />
-      </button>
-      <button class="friend-request-btn">
-        <img src="../assets/img/icons/icon-tick.svg" />
-      </button>
-    </div>
-  </article> -->
+      <div class="friend-request-buttons-container">
+        <button class="friend-request-btn">
+          <img src="../assets/img/icons/icon-x.svg"/>
+        </button>
+        <button class="friend-request-btn">
+          <img src="../assets/img/icons/icon-tick.svg"/>
+        </button>
+      </div>
+    </article>
+  </ng-container>
 
   <!-- Search result example -->
-  <article class="friend-request-row">
-    <img class="icon-circle icon-width-30" src="../assets/img/icons/icon-profile-default-picture.svg">
+  <ng-container *ngIf="mode === PAGE_MODES.search">
+    <article *ngFor="let item of searchResult" class="friend-request-row">
+      <img class="icon-circle icon-width-30" [src]="item.profilePicture || '../assets/img/icons/icon-profile-default-picture.svg'">
 
-    <p class="friend-request-profile-name">Stepan Nikoghosyan</p>
+      <p class="friend-request-profile-name">{{item.firstName}} {{item.lastName}}</p>
 
-    <button class="header-btn-with-text send-requst-btn">Send request</button>
-  </article>
+      <button class="header-btn-with-text send-requst-btn">Send request</button>
+    </article>
+  </ng-container>
 </section>

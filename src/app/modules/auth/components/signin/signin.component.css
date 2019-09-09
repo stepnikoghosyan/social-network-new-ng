@@ -1,0 +1,171 @@
+.signup-container {
+  background-color: #1def5a;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*height: 80%;*/
+  /*width: 80%;*/
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 3px gray;
+}
+
+.auth-title {
+  color: #1def5a;
+  text-shadow: 2px 1px 3px gray;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.auth-form {
+  width: 100%;
+  margin: 30px auto 0 auto;
+}
+
+.form-control-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.input-label {
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.form-input {
+  width: 100%;
+  min-width: 300px;
+  font-size: 14px;
+  height: 25px;
+  line-height: 25px;
+  border: 1px solid #aaa;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+  padding: 14px 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  border: 1px solid #138dff;
+  /*box-shadow:  0 0 7px 1px #138dff;*/
+}
+
+.form-input-error {
+  border: 1px solid #e65d5d;
+  box-shadow:  0 0 7px 1px #e65d5d;
+}
+
+
+/*Below the form*/
+.form-submit-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.form-submit-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit-btn-container {
+  margin-top: 10px;
+}
+
+.already-have-account {
+  margin-top: 30px;
+}
+
+.forgot-password {
+  margin-top: 10px;
+}
+
+.submit-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  border: 1px solid #0184ff;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.submit-btn:hover {
+  color: #fff;
+  background-color: #0184ff;
+  cursor: pointer;
+}
+
+.submit-btn:active {
+  color: #fff;
+  background-color: #072f5f;
+}
+
+.submit-btn:disabled {
+  color: #777;
+  border-color: #777;
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled:hover {
+  background-color: transparent;
+}
+
+.link-text {
+  color: #138dff;
+}
+
+.form-submit-row span {
+  font-size: 12px;
+  color: #777;
+}
+
+.form-submit-row a {
+  text-decoration: none;
+  margin-left: 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.form-submit-row a:hover {
+  border: 1px solid #138dff;
+}
+
+.form-submit-row a:active {
+  text-shadow: 0 0 3px #0184ff;
+}

@@ -1,0 +1,45 @@
+<section class="signup-container">
+  <div class="signup-content">
+    <h1 class="auth-title">Signin</h1>
+
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()">
+      <div class="form-control-container">
+        <label class="input-label" for="email">Email</label>
+        <input
+          formControlName="email"
+          class="form-input"
+          [ngClass]="displayErrorStyle(form, 'email', 'submitted')"
+          type="email"
+          id="email"
+          placeholder="Email"/>
+      </div>
+
+      <div class="form-control-container">
+        <label class="input-label" for="password">Password</label>
+        <input
+          formControlName="password" class="form-input"
+          [ngClass]="displayErrorStyle(form, 'password', 'submitted')"
+          type="password"
+          id="password"
+          placeholder="Password"/>
+      </div>
+
+      <div class="form-submit-row submit-btn-container">
+        <button class="submit-btn">Sign In</button>
+      </div>
+    </form>
+
+    <div class="form-submit-container">
+
+      <div class="form-submit-row already-have-account">
+        <span>Already have an account?</span>
+        <a class="link-text" routerLink="/auth/signup">Sign up</a>
+      </div>
+
+      <div class="form-submit-row forgot-password">
+        <span>Forgot password?</span>
+        <a class="link-text" routerLink="/auth/reset-password">Reset</a>
+      </div>
+    </div>
+  </div>
+</section>
