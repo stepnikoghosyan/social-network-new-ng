@@ -8,7 +8,7 @@ import {takeUntil} from 'rxjs/operators';
 // utils
 import {emailPattern, passwordPattern} from '../../../../shared/validators/patterns';
 import {formErrorHandler} from '../../../../shared/utils/error-handlers';
-import {FormValidation} from '../../../../shared/utils/forms';
+import {FormValidation} from '../../../../shared/utils/forms.utils';
 
 // services
 import {AuthService} from '../../services/auth.service';

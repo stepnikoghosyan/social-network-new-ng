@@ -6,9 +6,10 @@ import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
 // utils
-import {FormValidation} from '../../../../shared/utils/forms';
+import {FormValidation} from '../../../../shared/utils/forms.utils';
 import {emailPattern} from '../../../../shared/validators/patterns';
 import {formErrorHandler} from '../../../../shared/utils/error-handlers';
+import {VALIDATION_MESSAGES} from '../../../../shared/utils/form-error-messages';
 
 // services
 import {AuthService} from '../../services/auth.service';
@@ -27,6 +28,7 @@ export class SigninComponent extends FormValidation implements OnInit, OnDestroy
 
   public form: FormGroup;
   public errorResponseMessage: string;
+  public validationMessages = VALIDATION_MESSAGES;
   private submitted = false;
   private subscription = new Subject();
 

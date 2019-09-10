@@ -12,6 +12,9 @@
           type="email"
           id="email"
           placeholder="Email"/>
+        <ng-container *ngFor="let item of form.get('email').errors | keyvalue">
+          <p *ngIf="item.value && isFieldInvalid(form, 'email', 'submitted')" class="form-field-error-message">{{validationMessages['email'][item.key]}}</p>
+        </ng-container>
       </div>
 
       <div class="form-control-container">
@@ -22,6 +25,9 @@
           type="password"
           id="password"
           placeholder="Password"/>
+        <ng-container *ngFor="let item of form.get('password').errors | keyvalue">
+          <p *ngIf="item.value && isFieldInvalid(form, 'password', 'submitted')" class="form-field-error-message">{{validationMessages['password'][item.key]}}</p>
+        </ng-container>
       </div>
 
       <div class="form-submit-row submit-btn-container">
