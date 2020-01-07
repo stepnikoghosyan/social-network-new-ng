@@ -271,3 +271,17 @@ app-room {
 app-footer {
   z-index: 100;
 }
+
+
+/*FORMS*/
+.form-field-error-message {
+  color: #e65d5d;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+
+.form-response-error-message-text {
+  color: #e65d5d;
+  text-align: center;
+}

@@ -8,7 +8,6 @@ import {takeUntil} from 'rxjs/operators';
 // utils
 import {FormValidation} from '../../../../shared/utils/forms.utils';
 import {emailPattern} from '../../../../shared/validators/patterns';
-import {formErrorHandler} from '../../../../shared/utils/error-handlers';
 import {VALIDATION_MESSAGES} from '../../../../shared/utils/form-error-messages';
 
 // services
@@ -27,7 +26,7 @@ import {AuthModel} from '../../models/response/auth.model';
 export class SigninComponent extends FormValidation implements OnInit, OnDestroy {
 
   public form: FormGroup;
-  public errorResponseMessage: string;
+  // public errorResponseMessage: string;
   public validationMessages = VALIDATION_MESSAGES;
   private submitted = false;
   private subscription = new Subject();
@@ -65,7 +64,8 @@ export class SigninComponent extends FormValidation implements OnInit, OnDestroy
         this.router.navigate(['/homepage']);
       }),
       (error: HttpErrorResponse): void => {
-        this.errorResponseMessage = formErrorHandler(this.form, error);
+        this.formErrorHandler(this.form, error);
+        console.log(this.form.controls);
       }
     );
   }

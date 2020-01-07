@@ -10,7 +10,7 @@ export function formErrorHandler(formGroup: FormGroup, error: HttpErrorResponse)
   const err = error.error as FormErrorResponseModel;
   if (err.field && formGroup.get(err.field)) {
     // TODO: how to set message under this field
-    formGroup.get(err.field).setErrors({'error-response': true});
+    formGroup.get(err.field).setErrors({[err.code]: true});
     return null;
   }
 

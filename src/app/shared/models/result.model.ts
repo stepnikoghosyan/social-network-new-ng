@@ -18,4 +18,5 @@ export interface ErrorResponseModel {
 
 export interface FormErrorResponseModel extends ErrorResponseModel {
   field: string;
+  code: string;
 }

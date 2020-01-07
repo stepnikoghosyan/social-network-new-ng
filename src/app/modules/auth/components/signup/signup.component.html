@@ -12,6 +12,9 @@
           type="text"
           id="firstName"
           placeholder="First name"/>
+        <ng-container *ngFor="let item of form.get('firstName').errors | keyvalue">
+          <p *ngIf="item.value && isFieldInvalid(form, 'firstName', 'submitted')" class="form-field-error-message">{{validationMessages['firstName'][item.key]}}</p>
+        </ng-container>
       </div>
 
       <div class="form-control-container">
@@ -23,6 +26,9 @@
           type="text"
           id="lastName"
           placeholder="Last name"/>
+        <ng-container *ngFor="let item of form.get('lastName').errors | keyvalue">
+          <p *ngIf="item.value && isFieldInvalid(form, 'lastName', 'submitted')" class="form-field-error-message">{{validationMessages['lastName'][item.key]}}</p>
+        </ng-container>
       </div>
 
       <div class="form-control-container">
@@ -34,17 +40,27 @@
           type="email"
           id="email"
           placeholder="Email"/>
+        <ng-container *ngFor="let item of form.get('email').errors | keyvalue">
+          <p *ngIf="item.value && isFieldInvalid(form, 'email', 'submitted')" class="form-field-error-message">{{validationMessages['email'][item.key]}}</p>
+        </ng-container>
       </div>
 
       <div class="form-control-container">
         <label class="input-label" for="password">Password</label>
         <input
-          formControlName="password" class="form-input"
+          formControlName="password"
+          class="form-input"
           [ngClass]="displayErrorStyle(form, 'password', 'submitted')"
           type="password"
           id="password"
           placeholder="Password"/>
+        <ng-container *ngFor="let item of form.get('password').errors | keyvalue">
+          <p *ngIf="item.value && isFieldInvalid(form, 'password', 'submitted')" class="form-field-error-message">{{validationMessages['password'][item.key]}}</p>
+        </ng-container>
       </div>
+
+
+      <p class="form-response-error-message-text">{{errorResponseMessage}}</p>
 
       <div class="form-submit-row submit-btn-container">
         <button class="submit-btn">Sign Up</button>

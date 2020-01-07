@@ -21,6 +21,7 @@
         <label class="input-label" for="password">Password</label>
         <input
           formControlName="password" class="form-input"
+          class="form-input"
           [ngClass]="displayErrorStyle(form, 'password', 'submitted')"
           type="password"
           id="password"
@@ -29,6 +30,8 @@
           <p *ngIf="item.value && isFieldInvalid(form, 'password', 'submitted')" class="form-field-error-message">{{validationMessages['password'][item.key]}}</p>
         </ng-container>
       </div>
+
+      <p class="form-response-error-message-text">{{errorResponseMessage}}</p>
 
       <div class="form-submit-row submit-btn-container">
         <button class="submit-btn">Sign In</button>
